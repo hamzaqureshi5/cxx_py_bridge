@@ -13,5 +13,4 @@ REGISTER_FFI(llmx_sub)
 
 int llmx_divide(int a, int b) { return a / b; }
 REGISTER_FFI(llmx_divide)
-
 }
