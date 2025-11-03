@@ -1,0 +1,2 @@
+/usr/local/lib/libllmx.so
+/usr/local/include/ffi.hpp

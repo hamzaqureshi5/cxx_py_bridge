@@ -1,0 +1,7 @@
+/home/hamza/Repos/ffi/build/CMakeFiles/llmx.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/edit_cache.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/rebuild_cache.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/list_install_components.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/install.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/install/local.dir
+/home/hamza/Repos/ffi/build/CMakeFiles/install/strip.dir
