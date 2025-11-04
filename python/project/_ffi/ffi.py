@@ -4,15 +4,12 @@ import os
 import ctypes
 from ctypes import c_int, c_char_p
 
+
 class CPPFFI:
     def __init__(self, lib_path=None):
         if lib_path is None:
             # automatic search
-            search_paths = [
-                "./libllmx.so",
-                "../build/libllmx.so",
-                "../libllmx.so"
-            ]
+            search_paths = ["./libllmx.so", "../build/libllmx.so", "../libllmx.so"]
             for p in search_paths:
                 if os.path.exists(p):
                     lib_path = p
@@ -34,6 +31,7 @@ class CPPFFI:
         self.cpp_functions[name] = func
         return func
 
+
 # class CPPFFI:
 #     def __init__(self, lib_path: str):
 #         self.lib = ctypes.CDLL(lib_path)
@@ -54,17 +52,9 @@ class CPPFFI:
 
 
 # Global FFI instance
-#ffi = CPPFFI("./libllmx.so")
-ffi = CPPFFI("../build/libllmx.so")
+# ffi = CPPFFI("./libllmx.so")
+ffi_ = CPPFFI("../build/libllmx.so")
 
 # Auto load your functions
 for fname in ["llmx_add", "llmx_mul", "llmx_sub", "llmx_divide"]:
-    ffi.load(fname)
-
-
-# from ffi import ffi
-
-print(ffi.cpp_functions["llmx_add"](3, 4))     # 7
-print(ffi.cpp_functions["llmx_mul"](6, 7))     # 42
-print(ffi.cpp_functions["llmx_sub"](10, 3))    # 7
-print(ffi.cpp_functions["llmx_divide"](20, 5)) # 4
+    ffi_.load(fname)
